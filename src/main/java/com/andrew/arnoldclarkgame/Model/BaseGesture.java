@@ -17,6 +17,7 @@ import javafx.scene.layout.VBox;
 /**
  *
  * @author Andrew Wright
+ * Models the gestures used by the game: Spock, Lizard, etc
  */
 public class BaseGesture implements IScreenElement
 {
@@ -80,6 +81,12 @@ public class BaseGesture implements IScreenElement
         return "Name:" + name + "Beaten by: " + beatenBy;
     }   
     
+    /**
+     * Override the default equals and hashcode method so that the .equals method can be used later to properly compare two objects of this type 
+     * Ended up not needing to do this as it just uses String comparison 
+     * @param o
+     * @return 
+     */
     @Override
     public boolean equals(Object o) {
 

@@ -20,7 +20,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 
 /**
- *
+ * The controller for the FXML file "home.fxml"
  * @author Andrew Wright
  */
 public class HomeController implements Initializable {
@@ -32,16 +32,19 @@ public class HomeController implements Initializable {
     
     private ArrayList<BaseGesture> options;
     private Label currentLabel;
-    private int userScore;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) 
     {
         // TODO
-        userScore =0;
         prepareOptions();
     }    
     
+    /**
+     * Manages the functionality of the user interface
+     * 
+     * First sets up the available options that the user has and then sets what will happen when the user selects one of these options
+     */
     private void prepareOptions()
     {
         options = new ArrayList<>();
@@ -66,7 +69,6 @@ public class HomeController implements Initializable {
                 currentLabel.setFont((new Font("System", 20)));
                 
                 
-               // Label userScoreLabel = new Label ("User: "+String.valueOf(userScore)+" ");
                 resultBox.getChildren().clear();
                 
                 resultBox.getChildren().add(newPlay.getComputerGesture().convertToDisplay(false));

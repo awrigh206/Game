@@ -8,10 +8,9 @@ package com.andrew.arnoldclarkgame.Game;
 import com.andrew.arnoldclarkgame.Model.BaseGesture;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
-import javafx.scene.control.Label;
 
 /**
- *
+ * Models a "Play"/ when a user selects a gesture from those available
  * @author Andrew Wright
  */
 public class Play 
@@ -27,12 +26,19 @@ public class Play
         selectGesture();
     }
     
+    /**
+     * Select a gesture from those available by picking a random number in the correct range 
+     */
     public void selectGesture()
     {
         int number = ThreadLocalRandom.current().nextInt(0, possibleGestures.size());
         computerGesture = possibleGestures.get(number);
     }
     
+    /**
+     * Calculates whether the user or the computer has won and returns a message
+     * @return Returns a string with an appropriate message depending on the result
+     */
     public String result()
     {
         String text="";
