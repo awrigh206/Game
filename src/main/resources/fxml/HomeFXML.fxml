@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="383.0" prefWidth="556.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.andrew.arnoldclarkgame.Interfaces.HomeController">
+   <children>
+      <BorderPane layoutX="259.0" layoutY="126.0" prefHeight="383.0" prefWidth="556.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Rock, Paper, Scissors, Lizzard, Spock" underline="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <VBox maxHeight="300.0" maxWidth="600.0" prefHeight="200.0" prefWidth="426.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="The computer has played:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="resultBox" prefHeight="100.0" prefWidth="200.0" />
+                  <Label text="Options:">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+                  <HBox fx:id="optionBox" prefHeight="100.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
